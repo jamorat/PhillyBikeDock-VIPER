@@ -222,6 +222,7 @@
 			buildConfigurationList = 11B7DDF92002B84800B3A181 /* Build configuration list for PBXNativeTarget "PhillyBikeDock-VIPER" */;
 			buildPhases = (
 				C7F54CE9CC1C8122C870AF64 /* [CP] Check Pods Manifest.lock */,
+				11242A412002DBC200E4DD91 /* ShellScript */,
 				11B7DDCD2002B84800B3A181 /* Sources */,
 				11B7DDCE2002B84800B3A181 /* Frameworks */,
 				11B7DDCF2002B84800B3A181 /* Resources */,
@@ -367,6 +368,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhillyBikeDock-VIPERTests/Pods-PhillyBikeDock-VIPERTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		11242A412002DBC200E4DD91 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
 		1658AFD7553AC33915E0352A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
