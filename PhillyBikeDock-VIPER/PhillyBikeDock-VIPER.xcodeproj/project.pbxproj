@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11242A342002D1B400E4DD91 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				11B7DDD42002B84800B3A181 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		11B7DDC82002B84800B3A181 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +117,7 @@
 		11B7DDD32002B84800B3A181 /* PhillyBikeDock-VIPER */ = {
 			isa = PBXGroup;
 			children = (
-				11B7DDD42002B84800B3A181 /* AppDelegate.swift */,
+				11242A342002D1B400E4DD91 /* Application */,
 				11B7DDD62002B84800B3A181 /* ViewController.swift */,
 				11B7DDD82002B84800B3A181 /* Main.storyboard */,
 				11B7DDDB2002B84800B3A181 /* Assets.xcassets */,
