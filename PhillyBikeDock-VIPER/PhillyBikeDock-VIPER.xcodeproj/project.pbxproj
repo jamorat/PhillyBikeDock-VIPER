@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		07771E4FEA7FCE0AF95542CC /* Pods_PhillyBikeDock_VIPERTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F67CD6EE10239CDB71CC16 /* Pods_PhillyBikeDock_VIPERTests.framework */; };
 		11242A382002D49D00E4DD91 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11242A372002D49D00E4DD91 /* RootRouter.swift */; };
+		11242A3C2002D5BE00E4DD91 /* BikeDockListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11242A3B2002D5BE00E4DD91 /* BikeDockListRouter.swift */; };
+		11242A3F2002D5DF00E4DD91 /* BikeDockListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11242A3E2002D5DF00E4DD91 /* BikeDockListPresenter.swift */; };
 		11B7DDD52002B84800B3A181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7DDD42002B84800B3A181 /* AppDelegate.swift */; };
 		11B7DDD72002B84800B3A181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7DDD62002B84800B3A181 /* ViewController.swift */; };
 		11B7DDDA2002B84800B3A181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B7DDD82002B84800B3A181 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		11242A372002D49D00E4DD91 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		11242A3B2002D5BE00E4DD91 /* BikeDockListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDockListRouter.swift; sourceTree = "<group>"; };
+		11242A3E2002D5DF00E4DD91 /* BikeDockListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDockListPresenter.swift; sourceTree = "<group>"; };
 		11B7DDD12002B84800B3A181 /* PhillyBikeDock-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PhillyBikeDock-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B7DDD42002B84800B3A181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B7DDD62002B84800B3A181 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		11242A352002D22600E4DD91 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				11242A392002D57500E4DD91 /* BikeDockList */,
 				11242A362002D46200E4DD91 /* Root */,
 			);
 			path = Modules;
@@ -108,6 +113,31 @@
 				11242A372002D49D00E4DD91 /* RootRouter.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		11242A392002D57500E4DD91 /* BikeDockList */ = {
+			isa = PBXGroup;
+			children = (
+				11242A3D2002D5C900E4DD91 /* Presenter */,
+				11242A3A2002D58500E4DD91 /* Router */,
+			);
+			path = BikeDockList;
+			sourceTree = "<group>";
+		};
+		11242A3A2002D58500E4DD91 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				11242A3B2002D5BE00E4DD91 /* BikeDockListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		11242A3D2002D5C900E4DD91 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				11242A3E2002D5DF00E4DD91 /* BikeDockListPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		11B7DDC82002B84800B3A181 = {
@@ -437,6 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11242A3C2002D5BE00E4DD91 /* BikeDockListRouter.swift in Sources */,
+				11242A3F2002D5DF00E4DD91 /* BikeDockListPresenter.swift in Sources */,
 				11B7DDD72002B84800B3A181 /* ViewController.swift in Sources */,
 				11242A382002D49D00E4DD91 /* RootRouter.swift in Sources */,
 				11B7DDD52002B84800B3A181 /* AppDelegate.swift in Sources */,
