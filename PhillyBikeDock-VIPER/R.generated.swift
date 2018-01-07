@@ -51,12 +51,19 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
+    /// Storyboard `BikeDockListStoryboard`.
+    static let bikeDockListStoryboard = _R.storyboard.bikeDockListStoryboard()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    
+    /// `UIStoryboard(name: "BikeDockListStoryboard", bundle: ...)`
+    static func bikeDockListStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.bikeDockListStoryboard)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -78,7 +85,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -89,12 +96,36 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try storyboard.validate()
+  }
+  
   struct nib {
     fileprivate init() {}
   }
   
-  struct storyboard {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try bikeDockListStoryboard.validate()
+    }
+    
+    struct bikeDockListStoryboard: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bikeDockListStoryboard = StoryboardViewControllerResource<BikeDockListViewController>(identifier: "BikeDockListStoryboard")
+      let bundle = R.hostingBundle
+      let name = "BikeDockListStoryboard"
+      
+      func bikeDockListStoryboard(_: Void = ()) -> BikeDockListViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: bikeDockListStoryboard)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.bikeDockListStoryboard().bikeDockListStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'bikeDockListStoryboard' could not be loaded from storyboard 'BikeDockListStoryboard' as 'BikeDockListViewController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UIViewController
       
