@@ -6,4 +6,14 @@
 //  Copyright © 2018 R. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class RootRouter {
+    func presentBikeDockListScreen(in window: UIWindow?) {
+        if window != nil {
+            window!.makeKeyAndVisible()
+        }
+        
+        window?.rootViewController = BikeDockListRouter.assembleModule()
+    }
+}
