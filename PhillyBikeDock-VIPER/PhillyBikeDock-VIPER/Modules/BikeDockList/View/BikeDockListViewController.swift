@@ -9,7 +9,8 @@
 import UIKit
 
 class BikeDockListViewController: UIViewController {
-
+    var presenter: BikeDockListPresentation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
