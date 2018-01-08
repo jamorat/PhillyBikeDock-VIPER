@@ -111,16 +111,16 @@ struct _R: Rswift.Validatable {
     }
     
     struct bikeDockListStoryboard: Rswift.StoryboardResourceType, Rswift.Validatable {
-      let bikeDockListStoryboard = StoryboardViewControllerResource<BikeDockListViewController>(identifier: "BikeDockListStoryboard")
+      let bikeDockListViewController = StoryboardViewControllerResource<BikeDockListViewController>(identifier: "BikeDockListViewController")
       let bundle = R.hostingBundle
       let name = "BikeDockListStoryboard"
       
-      func bikeDockListStoryboard(_: Void = ()) -> BikeDockListViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: bikeDockListStoryboard)
+      func bikeDockListViewController(_: Void = ()) -> BikeDockListViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: bikeDockListViewController)
       }
       
       static func validate() throws {
-        if _R.storyboard.bikeDockListStoryboard().bikeDockListStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'bikeDockListStoryboard' could not be loaded from storyboard 'BikeDockListStoryboard' as 'BikeDockListViewController'.") }
+        if _R.storyboard.bikeDockListStoryboard().bikeDockListViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'bikeDockListViewController' could not be loaded from storyboard 'BikeDockListStoryboard' as 'BikeDockListViewController'.") }
       }
       
       fileprivate init() {}
