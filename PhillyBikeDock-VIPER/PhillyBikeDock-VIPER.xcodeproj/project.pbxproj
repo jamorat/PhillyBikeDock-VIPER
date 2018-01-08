@@ -128,7 +128,7 @@
 		11242A392002D57500E4DD91 /* BikeDockList */ = {
 			isa = PBXGroup;
 			children = (
-				11242A4D200301A100E4DD91 /* Contractor */,
+				11242A4D200301A100E4DD91 /* Contract */,
 				11242A4A2002F1F200E4DD91 /* Interactor */,
 				11242A452002E54C00E4DD91 /* View */,
 				11242A3D2002D5C900E4DD91 /* Presenter */,
@@ -178,12 +178,12 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		11242A4D200301A100E4DD91 /* Contractor */ = {
+		11242A4D200301A100E4DD91 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
 				11242A4E200301C200E4DD91 /* BikeDockListContract.swift */,
 			);
-			path = Contractor;
+			path = Contract;
 			sourceTree = "<group>";
 		};
 		11B7DDC82002B84800B3A181 = {
