@@ -7,6 +7,6 @@
 //
 
 import Foundation
-class BikeDockListPresenter {
+class BikeDockListPresenter: BikeDockListPresentation {
     
 }
