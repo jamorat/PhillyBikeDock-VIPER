@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class BikeDockListRouter {
+class BikeDockListRouter: BikeDockListWireframe {
     weak var viewController: UIViewController?
     
     static func assembleModule() -> UIViewController {
