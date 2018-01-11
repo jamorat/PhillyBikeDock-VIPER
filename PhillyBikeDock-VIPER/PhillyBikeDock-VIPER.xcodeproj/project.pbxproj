@@ -16,6 +16,7 @@
 		11242A492002E67200E4DD91 /* BikeDockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11242A482002E67200E4DD91 /* BikeDockListViewController.swift */; };
 		11242A4C2002F75100E4DD91 /* BikeDockListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11242A4B2002F75100E4DD91 /* BikeDockListInteractor.swift */; };
 		11242A4F200301C200E4DD91 /* BikeDockListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11242A4E200301C200E4DD91 /* BikeDockListContract.swift */; };
+		11242A522005AFB700E4DD91 /* BikeDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11242A512005AFB700E4DD91 /* BikeDock.swift */; };
 		11B7DDD52002B84800B3A181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7DDD42002B84800B3A181 /* AppDelegate.swift */; };
 		11B7DDD72002B84800B3A181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7DDD62002B84800B3A181 /* ViewController.swift */; };
 		11B7DDDA2002B84800B3A181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B7DDD82002B84800B3A181 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		11242A482002E67200E4DD91 /* BikeDockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDockListViewController.swift; sourceTree = "<group>"; };
 		11242A4B2002F75100E4DD91 /* BikeDockListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDockListInteractor.swift; sourceTree = "<group>"; };
 		11242A4E200301C200E4DD91 /* BikeDockListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDockListContract.swift; sourceTree = "<group>"; };
+		11242A512005AFB700E4DD91 /* BikeDock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDock.swift; sourceTree = "<group>"; };
 		11B7DDD12002B84800B3A181 /* PhillyBikeDock-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PhillyBikeDock-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B7DDD42002B84800B3A181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B7DDD62002B84800B3A181 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,14 @@
 			path = Contract;
 			sourceTree = "<group>";
 		};
+		11242A502005AF9E00E4DD91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11242A512005AFB700E4DD91 /* BikeDock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		11B7DDC82002B84800B3A181 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +221,7 @@
 		11B7DDD32002B84800B3A181 /* PhillyBikeDock-VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				11242A502005AF9E00E4DD91 /* Models */,
 				11242A342002D1B400E4DD91 /* Application */,
 				11242A352002D22600E4DD91 /* Modules */,
 				11242A422002DC5200E4DD91 /* Resources */,
@@ -536,6 +547,7 @@
 				11242A4F200301C200E4DD91 /* BikeDockListContract.swift in Sources */,
 				11242A382002D49D00E4DD91 /* RootRouter.swift in Sources */,
 				11B7DDD52002B84800B3A181 /* AppDelegate.swift in Sources */,
+				11242A522005AFB700E4DD91 /* BikeDock.swift in Sources */,
 				11242A442002E2DF00E4DD91 /* R.generated.swift in Sources */,
 				11242A492002E67200E4DD91 /* BikeDockListViewController.swift in Sources */,
 			);
