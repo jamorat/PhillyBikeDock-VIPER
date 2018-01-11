@@ -34,3 +34,11 @@ class BikeDockListViewController: UIViewController {
     */
 
 }
+
+extension BikeDockListViewController : BikeDockListView {
+    func showNoContentScreen() {
+        print("show no content screen")
+    }
+    
+    
+}
