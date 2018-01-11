@@ -7,6 +7,10 @@
 //
 
 import Foundation
-class BikeDockListInteractor {
+class BikeDockListInteractor : BikeDockListUseCase {
+    weak var output: BikeDockListInteractorOutput!
     
+    func fetchBikeDockList() {
+        print("fetching bike dock list")
+    }
 }
