@@ -9,6 +9,10 @@
 import Foundation
 
 class BikeDockListPresenter: BikeDockListPresentation {
+    func viewDidLoad() {
+        interactor.fetchBikeDockList()
+    }
+    
     weak var view: BikeDockListView?
     var interactor: BikeDockListUseCase!
     var router: BikeDockListWireframe!
