@@ -8,15 +8,25 @@
 
 import UIKit
 
-class BikeDockListViewController: UIViewController {
+class BikeDockListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    }
+    
     var presenter: BikeDockListPresentation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupView()
         // Do any additional setup after loading the view.
     }
 
+    func setupView(){
+        bikeDockListTableView.dataSource = self
+        bikeDockListTableView.delegate = self
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
