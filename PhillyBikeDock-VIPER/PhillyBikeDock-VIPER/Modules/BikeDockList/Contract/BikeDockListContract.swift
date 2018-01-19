@@ -15,13 +15,15 @@ protocol BikeDockListView : class {
     var presenter: BikeDockListPresentation! { get set }
     
     func showNoContentScreen()
-    //func showArticlesData(_ articles: [Article])
+    func showBikeDocksData(_ bikeDocks: BikeDock)
 }
 
 protocol BikeDockListPresentation: class {
     weak var view: BikeDockListView? { get set }
     var interactor: BikeDockListUseCase! { get set }
     var router: BikeDockListWireframe! { get set }
+    
+    func viewDidLoad()
 }
 
 protocol BikeDockListUseCase: class {
@@ -31,6 +33,6 @@ protocol BikeDockListUseCase: class {
 }
 
 protocol BikeDockListInteractorOutput : class {
-    func bikeDockListFetched(_ bikeDocks: [BikeDock])
+    func bikeDockListFetched(_ bikeDocks: BikeDock)
     func bikeDockListFetchFailed()
 }
