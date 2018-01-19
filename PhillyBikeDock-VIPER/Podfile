@@ -4,7 +4,8 @@ use_frameworks!
 target 'PhillyBikeDock-VIPER' do
   pod 'Kingfisher'
   pod 'R.swift'
-  pod 'RxSwift'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
   pod 'PKHUD', '~> 5.0'
   pod 'ObjectMapper'
     target 'PhillyBikeDock-VIPERTests' do
