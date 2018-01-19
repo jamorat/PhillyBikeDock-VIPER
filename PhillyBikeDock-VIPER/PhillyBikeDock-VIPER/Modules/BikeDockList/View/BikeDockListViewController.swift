@@ -9,16 +9,33 @@
 import UIKit
 
 class BikeDockListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var bikeDockListTableView: UITableView!
+    var bikeDocks: BikeDock = BikeDock(dict: ["type": "", "features":[]])! {
+        didSet {
+            DispatchQueue.main.async {
+                self.bikeDockListTableView.reloadData()
+            }
+        }
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return bikeDocks.features.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = bikeDocks.features[indexPath.row].properties.name
+        return cell
     }
     
     var presenter: BikeDockListPresentation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupView()
+        presenter.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
@@ -46,6 +63,10 @@ class BikeDockListViewController: UIViewController, UITableViewDataSource, UITab
 }
 
 extension BikeDockListViewController : BikeDockListView {
+    func showBikeDocksData(_ bikeDocks: BikeDock){
+        self.bikeDocks = bikeDocks
+    }
+    
     func showNoContentScreen() {
         print("show no content screen")
     }
